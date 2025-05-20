@@ -1,0 +1,30 @@
+{
+  "app": {
+    "title": "颜色卡",
+    "description": "一个简洁高效的颜色管理工具"
+  },
+  "colorInput": {
+    "label": "十六进制颜色",
+    "placeholder": "输入十六进制颜色值 (例如 #FF5733)",
+    "addButton": "添加到收藏",
+    "invalidFormat": "颜色格式无效"
+  },
+  "colorCard": {
+    "copy": "点击复制"
+  },
+  "colorConverter": {
+    "rgb": "RGB",
+    "argb": "ARGB",
+    "hsl": "HSL",
+    "hex": "十六进制"
+  },
+  "colorList": {
+    "title": "已保存颜色",
+    "empty": "尚未保存任何颜色",
+    "limit": "最多20个颜色",
+    "clear": "清除全部"
+  },
+  "clipboard": {
+    "copied": "已复制到剪贴板！"
+  }
+} 

@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 226, 232, 240;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+  --accent-color: 56, 189, 248;
+  --card-bg: 30, 41, 59;
+  --card-border: 51, 65, 85;
+}
+
+/* 创建动态背景 */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(15px);
+  }
+  75% {
+    transform: translateY(5px) translateX(5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 18, 18, 23;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--background-start-rgb)) 0%,
+    rgb(var(--background-end-rgb)) 100%
+  );
+  min-height: 100vh;
+  background-attachment: fixed;
+  position: relative;
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* 添加微妙的网格纹理 */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 添加动态光点 */
+.light-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.light-dot {
+  position: absolute;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, rgba(56, 189, 248, 0) 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulse-glow 8s infinite;
+}
+
+.light-dot:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+}
+
+.light-dot:nth-child(2) {
+  top: 60%;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  animation-delay: 2s;
+}
+
+.light-dot:nth-child(3) {
+  top: 20%;
+  left: 80%;
+  width: 180px;
+  height: 180px;
+  animation-delay: 4s;
+}
+
+.light-dot:nth-child(4) {
+  top: 70%;
+  left: 70%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 6s;
+}
+
+/* 添加动态线条 */
+.moving-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.moving-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0) 0%, rgba(56, 189, 248, 0.3) 50%, rgba(56, 189, 248, 0) 100%);
+  animation: float 20s infinite ease-in-out;
+}
+
+.moving-line:nth-child(1) {
+  top: 15%;
+  left: 0;
+  width: 30%;
+  animation-duration: 15s;
+}
+
+.moving-line:nth-child(2) {
+  top: 35%;
+  left: 30%;
+  width: 40%;
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+
+.moving-line:nth-child(3) {
+  top: 65%;
+  right: 10%;
+  width: 35%;
+  animation-duration: 13s;
+  animation-delay: 5s;
+}
+
+.moving-line:nth-child(4) {
+  top: 85%;
+  left: 20%;
+  width: 45%;
+  animation-duration: 22s;
+  animation-delay: 0s;
+}
+
+@layer components {
+  .color-card {
+    @apply rounded-lg shadow-md overflow-hidden transition-transform duration-200 backdrop-blur-sm bg-opacity-20 bg-slate-800 border border-slate-700;
+  }
+  
+  .color-card:hover {
+    @apply transform scale-[1.02] shadow-lg;
+  }
+  
+  .input-field {
+    @apply w-full p-3 border border-slate-700 rounded-md shadow-sm bg-slate-800 bg-opacity-70 backdrop-blur-sm text-slate-200 focus:border-sky-400 focus:ring focus:ring-sky-400 focus:ring-opacity-30;
+  }
+  
+  .btn {
+    @apply px-4 py-3 rounded-md font-medium shadow-sm transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-sky-500 text-white hover:bg-sky-600 shadow-sky-500/20 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-slate-600 text-white hover:bg-slate-700 shadow-slate-600/20 shadow-lg;
+  }
+  
+  .main-container {
+    @apply max-w-screen-xl mx-auto px-4 py-6;
+  }
+  
+  .card {
+    @apply bg-slate-800 bg-opacity-70 backdrop-blur-sm rounded-lg shadow-lg border border-slate-700 p-4;
+  }
+} 

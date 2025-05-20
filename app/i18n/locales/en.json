@@ -1,0 +1,30 @@
+{
+  "app": {
+    "title": "Color Card",
+    "description": "A simple and efficient tool for color management"
+  },
+  "colorInput": {
+    "label": "Hex Color",
+    "placeholder": "Enter hex color (e.g. #FF5733)",
+    "addButton": "Add to Collection",
+    "invalidFormat": "Invalid color format"
+  },
+  "colorCard": {
+    "copy": "Click to copy"
+  },
+  "colorConverter": {
+    "rgb": "RGB",
+    "argb": "ARGB",
+    "hsl": "HSL",
+    "hex": "Hex"
+  },
+  "colorList": {
+    "title": "Saved Colors",
+    "empty": "No colors saved yet",
+    "limit": "Maximum 20 colors",
+    "clear": "Clear All"
+  },
+  "clipboard": {
+    "copied": "Copied to clipboard!"
+  }
+} 
