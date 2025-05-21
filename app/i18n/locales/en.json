@@ -26,5 +26,31 @@
   },
   "clipboard": {
     "copied": "Copied to clipboard!"
+  },
+  "famousColors": {
+    "title": "Classic Color Recommendations",
+    "description": "These classic colors have a long history in art and design. Click a color to view and add to your collection.",
+    "clickToView": "Click to view",
+    "addToCollection": "Add to collection",
+    "colors": {
+      "kleinBlue": "Klein Blue",
+      "schlemmerYellow": "Schlemmer Yellow",
+      "marsGreen": "Mars Green",
+      "tiffanyBlue": "Tiffany Blue",
+      "prussianBlue": "Prussian Blue",
+      "vandykeBrown": "Van Dyke Brown",
+      "burgundyRed": "Burgundy Red",
+      "bordeauxRed": "Bordeaux Red",
+      "titanRed": "Titan Red",
+      "neonPink": "Neon Pink",
+      "hermesOrange": "Hermes Orange",
+      "safetyOrange": "Safety Orange",
+      "lavenderPurple": "Lavender Purple",
+      "phthalocyanineBlue": "Phthalocyanine Blue",
+      "emeraldGreen": "Emerald Green",
+      "marygoldYellow": "Marygold Yellow",
+      "chinaRed": "China Red",
+      "cornflowerBlue": "Cornflower Blue"
+    }
   }
 } 

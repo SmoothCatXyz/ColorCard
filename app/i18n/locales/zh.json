@@ -26,5 +26,31 @@
   },
   "clipboard": {
     "copied": "已复制到剪贴板！"
+  },
+  "famousColors": {
+    "title": "经典配色推荐",
+    "description": "这些经典颜色在艺术和设计领域有着悠久历史，点击颜色可以查看并添加到收藏中。",
+    "clickToView": "点击查看",
+    "addToCollection": "添加到收藏",
+    "colors": {
+      "kleinBlue": "克莱因蓝",
+      "schlemmerYellow": "申布伦黄",
+      "marsGreen": "马尔斯绿",
+      "tiffanyBlue": "蒂芙尼蓝",
+      "prussianBlue": "普鲁士蓝",
+      "vandykeBrown": "凡戴客棕",
+      "burgundyRed": "勃艮第红",
+      "bordeauxRed": "波尔多红",
+      "titanRed": "提香红",
+      "neonPink": "霓虹粉",
+      "hermesOrange": "爱马仕橙",
+      "safetyOrange": "国际橙",
+      "lavenderPurple": "薰衣草紫",
+      "phthalocyanineBlue": "酞菁蓝",
+      "emeraldGreen": "翡翠绿",
+      "marygoldYellow": "金菊黄",
+      "chinaRed": "中国红",
+      "cornflowerBlue": "矢车菊蓝"
+    }
   }
 } 
